@@ -1,0 +1,101 @@
+body {
+    background: none !important;
+}
+
+.container {
+    /* Position */
+    position: absolute;
+    top: 50%; /* Top og ned */
+    left: 50%; /* Venstre og ud */
+    transform: translate(-50%, -50%); /* For den til at ceter */
+
+    /* Farve */
+    background-color: rgb(44, 44, 44); /* Baggruds Farve */
+
+    /* Størrelsen */
+    min-height: 300px;
+    max-height: 100px;
+    min-width: 400px;
+    max-width: 100px;
+
+    border-radius: 20px;
+}
+
+.Title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 2px #9c9c9c;
+}
+
+.input {
+    color: #ffffff;
+    transform: translate(-50%, -50%); /* For den til at ceter */
+    outline: none;
+    background-color: rgb(138, 138, 138); /* Baggruds Farve */
+    border: 2px solid white;
+    border-radius: 20px;
+
+    min-height: 25px;
+    max-height: 5px;
+    min-width: 380px;
+    max-width: 330px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    
+    margin-top: 5%;
+    margin-left: 50%;
+    display: block;
+}
+
+textarea:focus, input:focus {
+    color: #ffffff;
+}
+
+::placeholder {
+    text-align: center;
+    color: rgb(105, 105, 105);
+}
+
+button {
+
+    font-size: 30px;
+    margin-top: 10%;
+    margin-left: 50%;
+    display: block;
+    transform: translate(-50%, -50%); /* For den til at ceter */
+
+    transition: 0.3s;
+
+    min-height: 60px;
+    max-height: 15px;
+    min-width: 130px;
+    max-width: 80px;
+
+    background-color: rgb(138, 138, 138); /* Baggruds Farve */
+    
+    outline: none;
+
+    border: 2px solid white;
+    border-radius: 80px;
+}
+
+button:hover {
+    background-color: rgb(190, 190, 190); /* Baggruds Farve */
+}
+
+button:active {
+    background-color: rgb(138, 138, 138); /* Baggruds Farve */
+}
+
+#luk {
+    position: absolute;
+    left: 90%;
+
+    min-height: 40px;
+    max-height: 20px;
+    min-width: 40px;
+    max-width: 30px;
+}
