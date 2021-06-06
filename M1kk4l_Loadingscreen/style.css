@@ -1,0 +1,96 @@
+/* 
+	███╗   ███╗  ███╗  ██╗  ██╗██╗  ██╗  ██╗██╗██╗
+	████╗ ████║ ████║  ██║ ██╔╝██║ ██╔╝ ██╔╝██║██║
+	██╔████╔██║██╔██║  █████═╝ █████═╝ ██╔╝ ██║██║
+	██║╚██╔╝██║╚═╝██║  ██╔═██╗ ██╔═██╗ ███████║██║
+	██║ ╚═╝ ██║███████╗██║ ╚██╗██║ ╚██╗╚════██║███████╗
+	╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝     ╚═╝╚══════╝
+*/
+
+body {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    overflow: hidden;
+    background: #000;
+}
+
+.progress-border {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* For den til at ceter */
+    width: 310px;
+    height: 2%;
+    border-radius: 100px;
+    border: solid 0.5vh #000;
+    z-index: -10;     
+    background: rgba(9,3,85,255);
+}
+
+.progress {
+    height: 100%;
+    border-radius: 100px;
+    animation: progress 23s forwards;
+    z-index: -10;
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+        background: linear-gradient(to right, rgb(255, 174, 0), rgb(184,25,162));
+    }
+
+    100% {
+        width: 100%;
+        background: linear-gradient(to right, rgb(255, 174, 0), rgb(184,25,162));
+    }
+}
+
+
+.logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* For den til at ceter */
+    z-index: 5;
+    width: 38vh;
+    height: 30vh;
+    perspective: 400px;
+}
+
+.img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* For den til at ceter */
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    z-index: -13;
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-container img.next {
+    opacity: 1;
+    z-index: -12;
+}
+
+.img-container img.prev {
+    opacity: 1;
+    z-index: -11;
+}
+
+.img-container img.fade-out {
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    visibility: hidden;
+}
+
+::-webkit-media-controls-enclosure {
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+}
